@@ -47,7 +47,9 @@ def eval_metrics(gt, pred, min_depth=1e-3, max_depth=80):
     mask_1 = gt > min_depth
     mask_2 = gt < max_depth
     mask = np.logical_and(mask_1, mask_2)
-
+    print("mask : ", mask.size())
+    print("pred : ", pred.size())
+    print("gt : ", gt.size())
     gt = gt[mask]
     pred = pred[mask]
 

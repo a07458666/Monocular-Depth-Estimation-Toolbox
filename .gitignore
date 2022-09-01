@@ -122,3 +122,7 @@ nfs
 
 # project
 project
+
+dataset/
+checkpoints/
+depthformer_swint_endoscopy_results/
