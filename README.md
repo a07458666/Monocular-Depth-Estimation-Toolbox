@@ -1,4 +1,27 @@
 # Monocular-Depth-Estimation-Toolbox
+
+## Dataset Preprocessing
+Remember to modify "data_dir" to the dataset path
+
+[Preprocessing.ipynb](https://github.com/a07458666/Monocular-Depth-Estimation-Toolbox/blob/main/Preprocessing.ipynb)
+
+## Train Endoscopy
+
+```bash
+bash ./tools/dist_train.sh configs/depthformer/depthformer_swint_w7_endoscopy.py 1 --work-dir ./checkpoints/depthformer_endoscopy_scale16
+```
+
+## Test Endoscopy
+
+```bash
+python3 test.py configs/depthformer/depthformer_swint_w7_endoscopy.py checkpoints/depthformer_endoscopy_scale16/<bast pth>  --show-dir <output dir> --format-only
+```
+
+## visualization
+
+[Result.ipynb](https://github.com/a07458666/Monocular-Depth-Estimation-Toolbox/blob/main/Result.ipynb)
+
+
 ## Introduction
 
 Monocular-Depth-Estimation-Toolbox is an open source monocular depth estimation toolbox based on PyTorch and [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) v0.16.0.
